@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Wizard-v1</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="/pantallaRegistrar/css/raleway-font.css">
+	<link rel="stylesheet" type="text/css" href="/pantallaRegistrar/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<!-- Jquery -->
+	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="/pantallaRegistrar/css/style.css"/>
+</head>
+<body>
+	
+	<div class="page-content" style="background-image: url('images/wizard-v1.jpg')">
+		<div class="wizard-v1-content">
+			<div class="wizard-form">
+					<h1>
+			            	
+							<span class="step-number">Reservar</span>			        
+					</h1>
+		        <form class="form-register" id="form-register" action="#" method="post">
+		        	<div id="form-total">
+		        		<!-- SECTION 1 -->
+			            <h2>
+			            	<span class="step-icon"><i class="zmdi zmdi-account"></i></span>
+			            	<span class="step-number">Paso 1</span>
+			            	<span class="step-text">Seleccionar Datos de Reserva</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+								<div class="form-row">
+									<div class="form-holder form-holder form-tipo">
+										<label for="card-type">Restaurante</label>
+										<select name="tipo-cuenta" id="tipo-cuenta" class="form-control" onchange="cambiarFormulario()">
+											<option value="" disabled selected>Restaurante</option>
+											<option value="Tarjeta Credito">Italia 90</option>
+											<option value="Cuenta Bancaria">25 de mayo</option>
+											<option value="Cuenta Bancaria">Fellini</option>
+										</select>
+									</div>
+									<div class="form-holder">
+										<label for="card-type">Fecha</label>
+											<input type="text" class="form-control datepicker-here pl-85" data-language='en' data-date-format="dd - m - yyyy" id="dp1">
+											<span class="lnr lnr-chevron-down"></span>
+									</div>
+									<div class="form-holder">
+										<label for="month">Hora</label>
+										<select name="month" id="month" class="form-control">
+											<option value="" disabled selected>Mes vencimiento</option>
+											<option value="January">1</option>
+											<option value="February">2</option>
+											<option value="March">3</option>
+											<option value="February">4</option>
+											<option value="April">5</option>
+											<option value="May">6</option>
+										</select>
+									</div>
+								</div>
+							</div>
+			            </section>
+						<!-- SECTION 2 -->
+			            <h2>
+			            	<span class="step-icon"><i class="zmdi zmdi-card"></i></span>
+			            	<span class="step-number">Paso 2</span>
+			            	<span class="step-text">Informacion de Pago</span>
+			            </h2>
+			            <section>
+			                <div class="inner tarjeta">
+								<div class="form-row">
+									<div class="form-holder form-holder-3">
+										<label for="card-number">Numero Tarjeta</label>
+										<input type="text" name="card-number" class="card-number" id="card-number" placeholder="ex: 489050625008xxxx">
+									</div>
+									<div class="form-holder form-holder-2">
+										<label for="username">Titular Tarjeta</label>
+										<input type="text" placeholder="Titular tarjeta" class="form-control" id="username" name="username" required>
+									</div>
+								</div>
+								<div class="form-row">
+									
+									<div class="form-holder">
+										<label for="cvc">Codigo Seguridad</label>
+										<input type="text" name="cvc" class="cvc" id="cvc" placeholder="xxx">
+									</div>
+									<div class="form-holder">
+										<label for="month">Mes vencimiento</label>
+										<select name="month" id="month" class="form-control">
+											<option value="" disabled selected>Mes vencimiento</option>
+											<option value="January">January</option>
+											<option value="February">February</option>
+											<option value="March">March</option>
+											<option value="February">February</option>
+											<option value="April">April</option>
+											<option value="May">May</option>
+										</select>
+									</div>
+									<div class="form-holder">
+										<label for="year">Año Vencimiento</label>
+										<select name="year" id="year" class="form-control">
+											<option value="" disabled selected>Año Vencimiento</option>
+											<option value="2018">2018</option>
+											<option value="2017">2017</option>
+											<option value="2016">2016</option>
+											<option value="2015">2015</option>
+											<option value="2014">2014</option>
+											<option value="2013">2013</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="inner cuenta-bancaria">
+								<div class="form-row">
+									<div class="form-holder form-holder-3">
+										<label for="card-number">Banco</label>
+										<input type="text" name="card-number" class="card-number" id="banco" placeholder="Banco">
+									</div>
+									<div class="form-holder form-holder-2">
+										<label for="username">Sucursal</label>
+										<input type="text" placeholder="Sucursal" class="form-control" id="sucursal" name="username" required>
+									</div>
+								</div>
+								<div class="form-row">
+									
+									<div class="form-holder">
+										<label for="cvc">Numero Cuenta</label>
+										<input type="text" name="cvc" class="cvc" id="numero" placeholder="xxxxxxx-x">
+									</div>
+									
+									<div class="form-holder">
+										<label for="cvc">CBU</label>
+										<input type="text" name="cvc" class="cvc" id="cbu" placeholder="xxxxxxxxxxxxxxxxxxx">
+									</div>
+									
+								</div>
+							</div>
+			            </section>
+			            <!-- SECTION 3 -->
+			            <h2>
+			            	<span class="step-icon"><i class="zmdi zmdi-receipt"></i></span>
+			            	<span class="step-number">Paso 3</span>
+			            	<span class="step-text">Confirmar Datos</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<h3>Comfirmar Detalles</h3>
+								<div class="form-row table-responsive">
+									<table class="table-tarjeta">
+										<tbody>
+											<tr class="space-row">
+												<th>Tipo de Cuenta:</th>
+												<td id="tipo-cuenta-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Numero Tarjeta:</th>
+												<td id="card-number-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Titular Tarjeta:</th>
+												<td id="username-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Codigo seguridad:</th>
+												<td id="cvc-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Mes Vencimiento:</th>
+												<td id="month-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Año Vencimiento:</th>
+												<td id="year-val"></td>
+											</tr>
+										</tbody>
+									</table>
+									<table class="table-cuenta">
+										<tbody>
+											<tr class="space-row">
+												<th>Tipo de Cuenta:</th>
+												<td id="tipo-cuenta-val2"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Banco:</th>
+												<td id="banco-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Sucursal:</th>
+												<td id="sucursal-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>Numero Cuenta:</th>
+												<td id="numero-val"></td>
+											</tr>
+											<tr class="space-row">
+												<th>CBU:</th>
+												<td id="cbu-val"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+			            </section>
+		        	</div>
+		        </form>
+			</div>
+		</div>
+	</div>
+	<script src="/pantallaRegistrar/js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+	<script src="/pantallaRegistrar/js/jquery.steps.js"></script>
+	<script src="/pantallaRegistrar/js/main.js"></script>
+</body>
+</html>

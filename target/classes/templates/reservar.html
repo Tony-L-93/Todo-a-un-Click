@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8">
+		<title>Reservar</title>
+		<link rel="icon" type="image/png" href="/pantallaLogin/images/icons/favicon.ico"/>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" href="fonts/linearicons/style.css">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="/PantallaHotel/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+		<!-- DATE-PICKER -->
+		<link rel="stylesheet" href="/PantallaHotel/vendor/date-picker/css/datepicker.min.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="/PantallaHotel/css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="inner">
+				<div class="image-holder">
+					<img src="/PantallaHotel/images/form-wizard.jpg" alt="">
+					<h3>Tu Reservacion</h3>
+				</div>
+				
+            	<div id="wizard">
+            		<!-- SECTION 1 -->
+	                <h4>Elegir Fecha</h4>
+	                <section>
+						<div class="form-row">
+							<div class="form-holder">
+								<input type="text" class="form-control datepicker-here pl-85" data-language='en' id="dp1">
+								<span class="lnr lnr-chevron-down"></span>
+								<span class="placeholder"> Entrada :</span>
+							</div>
+							<div class="form-holder">
+								<input type="text" class="form-control datepicker-here pl-96" data-language='en'   id="dp2">
+								<span class="lnr lnr-chevron-down"></span>
+								<span class="placeholder">Salida :</span>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="select">
+								<div class="form-holder">
+									<div class="select-control">Cantidad de Personas :</div>
+									<span class="lnr lnr-chevron-down"></span>
+								</div>
+								<ul class="dropdown">
+									<li rel="1 Persona">1 Persona</li>
+									<li rel="2 Persona">2 Persona</li>
+									<li rel="3 Persona">3 Persona</li>
+									<li rel="4 Persona">4 Persona</li>
+									<li rel="5 Persona">5 Persona</li>
+								</ul>
+								
+							</div>
+							<div class="form-holder">
+									<span id="error"></span>
+							</div>
+							
+						</div>
+
+						<button class="forward">Reservar Ahora
+							<i class="zmdi zmdi-long-arrow-right"></i>
+						</button>
+	                </section>
+
+            	</div>
+			</div>
+		</div>
+
+		<script src="/PantallaHotel/js/jquery-3.3.1.min.js"></script>
+
+		<!-- JQUERY STEP -->
+		<script src="/PantallaHotel/js/jquery.steps.js"></script>
+
+		<!-- DATE-PICKER -->
+		<script src="/PantallaHotel/vendor/date-picker/js/datepicker.js"></script>
+		<script src="/PantallaHotel/vendor/date-picker/js/datepicker.en.js"></script>
+
+		<script src="/PantallaHotel/js/main.js"></script>
+<!-- Template created and distributed by Colorlib -->
+</body>
+</html>
