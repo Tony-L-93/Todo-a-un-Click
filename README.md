@@ -1,7 +1,7 @@
 <h1 align="center"> Todo a un Click</h1>
 
 ### Estructura del proyecto
-Se crea un microservicio donde se puede haver reserva de hotel y restaurant.
+Se crea un microservicio donde se puede hacer reserva de hotel y restaurant.
 <p align="center"><img src="https://github.com/Tony-L-93/Todo-a-un-Click/blob/master/doc/Reserva_Hotel.png"/></p>
 
 DOCUMENTACION:
